@@ -1,0 +1,27 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 2
+#
+# Samples: 83  of event 'cycles:ppp'
+# Event count (approx.): 153332752
+#
+# Overhead       Samples  Command  Shared Object      Symbol                          
+# ........  ............  .......  .................  ................................
+#
+    97.95%            67  a.out    a.out              [.] main
+     0.80%             2  a.out    [kernel.kallsyms]  [k] nmi
+     0.32%             2  a.out    [kernel.kallsyms]  [k] __x86_indirect_thunk_rax
+     0.27%             1  a.out    [kernel.kallsyms]  [k] __audit_syscall_entry
+     0.22%             1  a.out    [kernel.kallsyms]  [k] system_call_after_swapgs
+     0.22%             1  a.out    [kernel.kallsyms]  [k] page_add_new_anon_rmap
+     0.20%             1  a.out    [sunrpc]           [k] generic_match
+     0.01%             1  perf     [kernel.kallsyms]  [k] perf_event_addr_filters_exec
+     0.00%             1  perf     [kernel.kallsyms]  [k] acpi_map_lookup
+     0.00%             1  perf     [kernel.kallsyms]  [k] intel_bts_enable_local
+     0.00%             5  perf     [kernel.kallsyms]  [k] native_write_msr_safe
+
+
+#
+# (Tip: Use --symfs <dir> if your symbol files are in non-standard locations)
+#

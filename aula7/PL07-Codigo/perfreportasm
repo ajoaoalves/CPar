@@ -1,0 +1,110 @@
+ Samples |	Source code & Disassembly of a.out for cycles:ppp (67 samples, percent: local period)
+-----------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         :            Disassembly of section .text:
+         :
+         :            0000000000400450 <main>:
+         :            main():
+       0 :   400450:       push   %rbp
+       0 :   400451:       vmovss 0x217(%rip),%xmm4        # 400670 <_IO_stdin_used+0x30>
+       0 :   400459:       vxorps %xmm5,%xmm5,%xmm5
+       0 :   40045d:       xor    %eax,%eax
+       0 :   40045f:       vmovsd 0x1f1(%rip),%xmm3        # 400658 <_IO_stdin_used+0x18>
+       0 :   400467:       vmovsd 0x1f1(%rip),%xmm2        # 400660 <_IO_stdin_used+0x20>
+       0 :   40046f:       vxorpd %xmm1,%xmm1,%xmm1
+       0 :   400473:       mov    %rsp,%rbp
+       0 :   400476:       nopw   %cs:0x0(%rax,%rax,1)
+       0 :   400480:       vcvtsi2ss %eax,%xmm5,%xmm0
+      20 :   400484:       add    $0x1,%eax
+       0 :   400487:       vmulss %xmm4,%xmm0,%xmm0
+       0 :   40048b:       vcvtss2sd %xmm0,%xmm0,%xmm0
+      10 :   40048f:       vmulsd %xmm0,%xmm0,%xmm0
+       0 :   400493:       vaddsd %xmm3,%xmm0,%xmm0
+      29 :   400497:       vdivsd %xmm0,%xmm2,%xmm0
+       8 :   40049b:       vaddsd %xmm0,%xmm1,%xmm1
+       0 :   40049f:       cmp    $0x989680,%eax
+       0 :   4004a4:       jne    400480 <main+0x30>
+       0 :   4004a6:       vmulsd 0x1ba(%rip),%xmm1,%xmm0        # 400668 <_IO_stdin_used+0x28>
+       0 :   4004ae:       mov    $0x400644,%edi
+       0 :   4004b3:       mov    $0x1,%eax
+       0 :   4004b8:       callq  400420 <printf@plt>
+       0 :   4004bd:       xor    %eax,%eax
+       0 :   4004bf:       pop    %rbp
+       0 :   4004c0:       retq
+ Samples |	Source code & Disassembly of sunrpc.ko.xz for cycles:ppp (1 samples, percent: local period)
+-----------------------------------------------------------------------------------------------------------
+         :
+         :
+         :
+         :           Disassembly of section .text:
+         :
+         :           0000000000014070 <generic_match>:
+         :           generic_match():
+       0 :   14070:       callq  14075 <generic_match+0x5>
+       1 :   14075:       push   %rbp
+       0 :   14076:       xor    %eax,%eax
+       0 :   14078:       testb  $0x1,0x20(%rdi)
+       0 :   1407c:       mov    %rsp,%rbp
+       0 :   1407f:       je     140a0 <generic_match+0x30>
+       0 :   14081:       testb  $0x1,0x80(%rsi)
+       0 :   14088:       je     14098 <generic_match+0x28>
+       0 :   1408a:       mov    0x10(%rdi),%rcx
+       0 :   1408e:       cmp    %rcx,0x70(%rsi)
+       0 :   14092:       je     14120 <generic_match+0xb0>
+       0 :   14098:       pop    %rbp
+       0 :   14099:       retq
+       0 :   1409a:       nopw   0x0(%rax,%rax,1)
+       0 :   140a0:       mov    0x60(%rsi),%edx
+       0 :   140a3:       cmp    %edx,(%rdi)
+       0 :   140a5:       jne    14098 <generic_match+0x28>
+       0 :   140a7:       mov    0x64(%rsi),%edx
+       0 :   140aa:       cmp    %edx,0x4(%rdi)
+       0 :   140ad:       jne    14098 <generic_match+0x28>
+       0 :   140af:       testb  $0x1,0x80(%rsi)
+       0 :   140b6:       jne    14098 <generic_match+0x28>
+       0 :   140b8:       mov    0x68(%rsi),%r8
+       0 :   140bc:       mov    0x8(%rdi),%rdi
+       0 :   140c0:       cmp    %rdi,%r8
+       0 :   140c3:       je     14119 <generic_match+0xa9>
+       0 :   140c5:       mov    0x4(%r8),%r9d
+       0 :   140c9:       cmp    0x4(%rdi),%r9d
+       0 :   140cd:       jne    14098 <generic_match+0x28>
+       0 :   140cf:       test   %r9d,%r9d
+       0 :   140d2:       jle    14119 <generic_match+0xa9>
+       0 :   140d4:       mov    0x90(%r8),%rcx
+       0 :   140db:       mov    0x90(%rdi),%rdx
+       0 :   140e2:       mov    (%rdx),%edx
+       0 :   140e4:       cmp    %edx,(%rcx)
+       0 :   140e6:       je     14111 <generic_match+0xa1>
+       0 :   140e8:       jmp    14098 <generic_match+0x28>
+       0 :   140ea:       nopw   0x0(%rax,%rax,1)
+       0 :   140f0:       mov    %eax,%ecx
+       0 :   140f2:       mov    %eax,%edx
+       0 :   140f4:       shr    $0xa,%ecx
+       0 :   140f7:       and    $0x3ff,%edx
+       0 :   140fd:       add    $0x12,%rcx
+       0 :   14101:       mov    (%r8,%rcx,8),%rsi
+       0 :   14105:       mov    (%rdi,%rcx,8),%rcx
+       0 :   14109:       mov    (%rcx,%rdx,4),%ecx
+       0 :   1410c:       cmp    %ecx,(%rsi,%rdx,4)
+       0 :   1410f:       jne    14139 <generic_match+0xc9>
+       0 :   14111:       add    $0x1,%eax
+       0 :   14114:       cmp    %r9d,%eax
+       0 :   14117:       jne    140f0 <generic_match+0x80>
+       0 :   14119:       mov    $0x1,%eax
+       0 :   1411e:       pop    %rbp
+       0 :   1411f:       retq
+       0 :   14120:       mov    (%rdi),%edx
+       0 :   14122:       cmp    %edx,0x60(%rsi)
+       0 :   14125:       jne    14098 <generic_match+0x28>
+       0 :   1412b:       mov    0x4(%rdi),%eax
+       0 :   1412e:       cmp    %eax,0x64(%rsi)
+       0 :   14131:       pop    %rbp
+       0 :   14132:       sete   %al
+       0 :   14135:       movzbl %al,%eax
+       0 :   14138:       retq
+       0 :   14139:       xor    %eax,%eax
+       0 :   1413b:       pop    %rbp
+       0 :   1413c:       retq
